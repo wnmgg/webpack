@@ -1,4 +1,9 @@
 @import url("./a.css");
+@import url("./index.less");
 .a{
 	background: #000000;
 }
+body{
+	background: #ccc;
+}
+.content{color:red;}
