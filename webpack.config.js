@@ -26,7 +26,12 @@ module.exports = {
     ],
 	module:{	//模块
 		rules:[	//规则
-			{test:/\.css$/,use:[]}
+			{test:/\.css$/,use:[
+                {
+                    loader:'style-loader'
+                },
+                'css-loader'
+            ]}
 		]
 	}
 }
