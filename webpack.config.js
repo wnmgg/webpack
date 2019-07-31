@@ -7,10 +7,10 @@ module.exports = {
         contentBase:'./dist',   //以哪个目录
         compress:true,          //压缩
     },
-    mode:'production',         //模式 production, development
+    mode:'development',         //模式 production, development
     entry:'./src/index.js',
     output:{
-        filename:'bundle.[hash:8].js',
+        filename:'bundle.js',
         path:path.resolve(__dirname,'dist'),
     },
     plugins:[  //数组类型
@@ -23,6 +23,10 @@ module.exports = {
             },
             hash:true,                  //hash 戳 清除缓存用
         })
-
-    ]
+    ],
+	module:{	//模块
+		rules:[	//规则
+			{test:/\.css$/,use:[]}
+		]
+	}
 }
